@@ -5,7 +5,7 @@
 
 window.onload = function () {
     //wire up event handlers.
-
+    populateSearchBy();
     //prepare form for first use...
 
 
@@ -14,6 +14,14 @@ window.onload = function () {
 
 //function to list the options that a user can select from.
 function populateSearchBy(){
+
+    let initalOption = new Option("Please Select A Search Option", "");
+    searchBySelect.appendChild(initalOption);
+    let secondOption = new Option("Search By Category", "1");
+    searchBySelect.appendChild(secondOption);
+    let thirdOption = new Option("View All", "2");
+    searchBySelect.appendChild(thirdOption);
+
 
 
 };
