@@ -4,7 +4,7 @@
 const catSelectRow = document.getElementById("catSelectRow");
 const listOfItems = document.getElementById("listOfItems");
 
-
+const categorySelect = document.getElementById("categorySelect");
 
 window.onload = function () {
     //wire up event handlers.
@@ -29,7 +29,22 @@ function populateSearchBy(){
 
 //function to populate the category select list with values from the remote API.
 function populateCategorySelect(){
+    
+    let initalOption = new Option("Please Select A Category", "");
+    categorySelect.appendChild(initalOption);
 
+    fetch("http://localhost:8081/api/categories")
+        .then(response => response.json())
+        .then(categories => {
+            for (let category of categories) {
+
+                let option = document.createElement("option");
+                option.text = category.name;
+                option.value = category.categoryId;
+
+                categorySelect.appendChild(option);
+            }
+        });
 
 };
 
