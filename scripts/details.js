@@ -10,7 +10,7 @@ const productDetailsCard = document.getElementById("productDetailsCard"); // Thi
 window.onload = function() {
 
     // Fetch product details data from API
-
+    fetchDataFromAPITwo();
     addProductDetailsToProductCard();
 
 }

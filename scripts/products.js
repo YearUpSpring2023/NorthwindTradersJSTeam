@@ -8,8 +8,13 @@ const listOfItems = document.getElementById("listOfItems");
 
 window.onload = function () {
     //wire up event handlers.
-
+    populateSearchBy();
+    populateCategorySelect();
+    hideCatSelectRow();
+    hideListOfItems();
     //prepare form for first use...
+    searchTypeSelect.onchange = onSearchTypeSelectChange;
+    categorySelect.onchange = onCategorySelectChange;
 
 
 };
@@ -29,7 +34,7 @@ function populateCategorySelect(){
 };
 
 //function to handle the response to a new search by being selected.
-function onSearchBySelectChange(){
+function onSearchTypeSelectChange(){
 
 }
 
