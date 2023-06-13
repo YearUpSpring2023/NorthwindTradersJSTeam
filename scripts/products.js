@@ -1,7 +1,7 @@
 "use strict";
 
 //global variables
-const  = document.getElementById("");
+const categorySelect = document.getElementById("categorySelect");
 
 window.onload = function () {
     //wire up event handlers.
@@ -21,7 +21,7 @@ function populateSearchBy(){
 
 //function to populate the category select list with values from the remote API.
 function populateCategorySelect(){
-
+    
     let initalOption = new Option("Please Select A Category", "");
     categorySelect.appendChild(initalOption);
 
