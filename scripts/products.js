@@ -5,8 +5,13 @@
 
 window.onload = function () {
     //wire up event handlers.
-
+    populateSearchBy();
+    populateCategorySelect();
+    hideCatSelectRow();
+    hideListOfItems();
     //prepare form for first use...
+    searchBySelect.onchange = onSearchBySelectChange;
+    categorySelect.onchange = onCategorySelectChange;
 
 
 };
