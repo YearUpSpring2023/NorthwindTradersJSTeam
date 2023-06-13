@@ -1,6 +1,9 @@
 "use strict";
 
 //global variables
+const catSelectRow = document.getElementById("catSelectRow");
+const listOfItems = document.getElementById("listOfItems");
+
 
 
 window.onload = function () {
@@ -43,18 +46,24 @@ function createProductsRow(product){
 
 function hideCatSelectRow() {
   
+    catSelectRow.style.display = "none";
+
 }
 
 function showCatSelectRow() {
    
+    catSelectRow.style.display = "block";
+
 }
 
 function hideListOfItems() {
 
+    listOfItems.style.display = "none";
 
 }
 
 function showListOfItems() {
     
+    listOfItems.style.display = "block";
 
 }
